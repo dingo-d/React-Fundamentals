@@ -1,5 +1,7 @@
+// Main styles
+// TO DO: refactor afterwards.
 body {
-	font-family: -apple-system, BlinkMacSystemFont, SegoeUI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, SegoeUI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, sans-serif;
 }
 
 ul {
@@ -22,10 +24,10 @@ li {
   display: -o-flex;
   display: flex;
   justify-content: center;
-}
 
-.languages li {
-  margin: 10px;
-  font-weight: bold;
-  cursor: pointer;
+  li {
+    margin: 10px;
+    font-weight: bold;
+    cursor: pointer;
+  }
 }

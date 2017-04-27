@@ -1,3 +1,7 @@
+var React = require('react');
+var ReactDOM = require('react-dom');
+var PropTypes = require('prop-types');
+
 class Users extends React.Component {
   render() {
 
@@ -9,9 +13,7 @@ class Users extends React.Component {
         <ul>
           {peopleArray.map((el) => !el.friend || <li key={el.name}>{el.name}</li>)}
         </ul>
-
         <hr />
-
         <h1> Non Friends </h1>
         <ul>
           {peopleArray.map((el) => el.friend || <li key={el.name}>{el.name}</li>)}
@@ -20,6 +22,13 @@ class Users extends React.Component {
     )
   }
 }
+
+Users.PropTypes = {
+  list: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    friend: PropTypes.bool.isRequired
+  }))
+};
 
 ReactDOM.render(
   <Users list={[
